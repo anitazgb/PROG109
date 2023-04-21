@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Make sure you add a title -->
+  <title>Chapter 7</title>
+</head>
+<body>
+    <form action="/thankyou.html" method="post"></form>
+    <fieldset id="userInfo">
+        <legend>User Information</legend>
+        <label for="fname">Enter your name:</label><br />
+        <input type="text" id="fname" name="fname"><br />
+        <label for="pass">Enter your password:</label><br />
+        <input type="text" id="pass" name="pass"><br />
+        <label for="fname">Tell us about you</label><br />
+        <textarea id="about" name="about" cols="20" rows="5"></textarea><br />
+    </fieldset>
+    <br />
+    <label id="new" name="new">Are you new to my site?</label><br />
+    <input type="radio" id="yes" name="new" value="yes">
+    <label for="yes">yes</label>
+    <input type="radio" id="no" name="new" value="no">
+    <label for="no">no</label><br />
+    <label for="subscribe" id="subscribe">Do you want to subscribe to my blog?</label>
+    <input type="checkbox" id="subscribe" name="subscribe" value="subscribe"><br />
+    <label for="year" id="studentYear">What is your student year?</label>
+    <select id="studentYear" name="studentYear">
+        <option value="Select one option">Select one option</option>
+    </select> <br />
+    <label id="hear" name="hear">Where did you hear about me?</label><br />
+    <select name="hear" id="hear" size="3" multiple>
+        <option id="web" name="hear">Web</option>
+        <option id="newspaper" name="hear">Newspaper</option>
+        <option id="friends" name="hear">Friends</option>
+    </select>
+    <br />
+    <!--<input type="submit" value="SEND">-->
+    
+    <button type="button" onclick="alert('thankyou.html')">SEND</button>
 
+</form>
+</body>
+  
+</html>
