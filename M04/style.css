@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 46405c60999fc8787499ed7f2357f10d4583df03
 * {
     font-family: Arial, Verdana, sans-serif;
     color: #665544;
@@ -8,7 +11,8 @@ body {
     margin: 0 auto;
     background-image: url("images/ocean.jpg");
     background-repeat: no-repeat;
-    background-size: auto;}
+    background-size: auto;
+    text-align: center;}
 #content {
     overflow: auto;}
 #nav, #feature, #footer {
@@ -46,4 +50,8 @@ li {
     font-family: 'CursiveSerifBook', sans-serif;}
 @font-face {
     font-family: 'CursiveSerifBook';
+<<<<<<< HEAD
     src: url('fonts/Cursive/CursiveSans-Book.ttf');}
+=======
+    src: url('fonts/Cursive/CursiveSans-Book.ttf');}
+>>>>>>> 46405c60999fc8787499ed7f2357f10d4583df03
