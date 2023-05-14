@@ -1,55 +1,109 @@
-function createRhombus(pHeight, pColorEven, pColorOdd, pSymbol) {
-    upRight(pHeight, pColorEven, pColorOdd, pSymbol);
-    downRight(pHeight, pColorEven, pColorOdd, pSymbol);
-    upLeft(pHeight, pColorEven, pColorOdd, pSymbol);
-    downLeft(pHeight, pColorEven, pColorOdd, pSymbol);
-    
+// Define functions to create each part of the rhombus
+// Draw the up-right part of a rhombus
+function upRight(height, colorEven, colorOdd, symbol) {
+    let output = "";
+
+    for (let i = 1; i <= height; i++) {
+        // add spaces
+        for (let j = 1; j <= height - i; j++) {
+            output += " ";
+        }
+
+        // add symbols
+        for (let j = 1; j <= i; j++) {
+            if (j % 2 === 0) {
+                output += `<span style="color:${colorEven}">${symbol}</span>`;
+            } else {
+                output += `<span style="color:${colorOdd}">${symbol}</span>`;
+            }
+        }
+
+        output += "<br>";
     }
-    
-    function upRight(pHeight, pColorEven, pColorOdd, pSymbol){
-    var rLine ="";
-    for (i=0;i<pHeight;i++){
-    rLine +="<p>";
-    //Create each line on the Rhombus
-    for(j=0;j<=i;j++){
-    
-    //Is the position even or odd so we change the color
-    if (j%2)
-    //even
-    rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-    else
-    //odd
-    rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    
+
+    return output;
+}
+
+// Draw the down-right part of a rhombus
+function downRight(height, colorEven, colorOdd, symbol) {
+    let output = "";
+
+    for (let i = height; i >= 1; i--) {
+        // add spaces
+        for (let j = 1; j <= height - i; j++) {
+            output += " ";
+        }
+
+        // add symbols
+        for (let j = 1; j <= i; j++) {
+            if (j % 2 === 0) {
+                output += `<span style="color:${colorEven}">${symbol}</span>`;
+            } else {
+                output += `<span style="color:${colorOdd}">${symbol}</span>`;
+            }
+        }
+
+        output += "<br>";
     }
-    rLine +="</p>";
-    // console.log(rLine);
-    
+
+    return output;
+}
+
+// Draw the up-left part of a rhombus
+function upLeft(height, colorEven, colorOdd, symbol) {
+    let output = "";
+
+    for (let i = 1; i <= height; i++) {
+        // add symbols
+        for (let j = 1; j <= i; j++) {
+            if (j % 2 === 0) {
+                output += `<span style="color:${colorEven}">${symbol}</span>`;
+            } else {
+                output += `<span style="color:${colorOdd}">${symbol}</span>`;
+            }
+        }
+
+        // add spaces
+        for (let j = 1; j <= height - i; j++) {
+            output += " ";
+        }
+
+        output += "<br>";
     }
-    
-    document.getElementById("upRight").innerHTML = rLine;
+
+    return output;
+}
+
+// Draw the down-left part of a rhombus
+function downLeft(height, colorEven, colorOdd, symbol) {
+    let output = "";
+
+    for (let i = height; i >= 1; i--) {
+        // add symbols
+        for (let j = 1; j <= i; j++) {
+            if (j % 2 === 0) {
+                output += `<span style="color:${colorEven}">${symbol}</span>`;
+            } else {
+                output += `<span style="color:${colorOdd}">${symbol}</span>`;
+            }
+        }
+
+        // add spaces
+        for (let j = 1; j <= height - i; j++) {
+            output += " ";
+        }
+
+        output += "<br>";
     }
-    
-    function downRight(pHeight, pColorEven, pColorOdd, pSymbol){
-    var rLine ="";
-    for (i=pHeight;i > 0;i--){
-    rLine +="<p>";
-    //Create each line on the Rhombus
-    for(j=0;j<i;j++){
-    
-    //Is the position even or odd so we change the color
-    if (j%2)
-    //even
-    rLine +="<span style='color:" + pColorEven + ";'>" + pSymbol +"</span>";
-    else
-    //odd
-    rLine +="<span style='color:" + pColorOdd + ";'>" + pSymbol +"</span>";
-    
-    }
-    rLine +="</p>";
-    // console.log(rLine);
-    
-    }
-    
-    document.getElementById("downRight").innerHTML = rLine;
-    }
+
+    return output;
+}
+
+// Define a function to create the full rhombus
+function createRhombus(height, colorEven, colorOdd, symbol) {
+    // Call each function to create each part of the rhombus
+    document.getElementById("upLeft").innerHTML = upLeft(height, colorEven, colorOdd, symbol);
+    document.getElementById("upRight").innerHTML = upRight(height, colorEven, colorOdd, symbol);
+    document.getElementById("downLeft").innerHTML = downLeft(height, colorEven, colorOdd, symbol);
+    document.getElementById("downRight").innerHTML = downLeft(height, colorEven, colorOdd, symbol);
+}
