@@ -64,25 +64,25 @@ button:hover {
     grid-area: upLeft;
     background-color: var(--color-even);
     color: var(--color-odd);
-  }
-  
-  #upRight {
+}
+
+#upRight {
     grid-area: upRight;
     background-color: var(--color-odd);
     color: var(--color-even);
-  }
-  
-  #downLeft {
+}
+
+#downLeft {
     grid-area: downLeft;
     background-color: var(--color-odd);
     color: var(--color-even);
-  }
-  
-  #downRight {
+}
+
+#downRight {
     grid-area: downRight;
     background-color: var(--color-even);
     color: var(--color-odd);
-  }
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
@@ -99,23 +99,29 @@ button:hover {
 }
 
 .rhombus-container {
-	width: 100%;
-	clear: both;
+    width: 100%;
+    clear: both;
 }
+
 .rhombus-container span {
-  	display: inline-block; 
-	margin: 3px;
+    display: inline-block;
+    margin: 3px;
 }
+
 .calculate {
-	margin: 0 0 40px 0;
+    margin: 0 0 40px 0;
 }
-#upLeft, #downLeft {
-	float: left;
-	text-align: right;
-    	width: 50%;
+
+#upLeft,
+#downLeft {
+    float: left;
+    text-align: right;
+    width: 50%;
 }
-#upRight, #downRight {
-	float: right;
-	text-align: left;
-    	width: 50%;
+
+#upRight,
+#downRight {
+    float: right;
+    text-align: left;
+    width: 50%;
 }
