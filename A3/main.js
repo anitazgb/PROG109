@@ -4,10 +4,6 @@ function upRight(height, colorEven, colorOdd, symbol) {
     let output = "";
 
     for (let i = 1; i <= height; i++) {
-        // add spaces
-        for (let j = 1; j <= height - i; j++) {
-            output += " ";
-        }
 
         // add symbols
         for (let j = 1; j <= i; j++) {
@@ -29,10 +25,6 @@ function downRight(height, colorEven, colorOdd, symbol) {
     let output = "";
 
     for (let i = height; i >= 1; i--) {
-        // add spaces
-        for (let j = 1; j <= height - i; j++) {
-            output += " ";
-        }
 
         // add symbols
         for (let j = 1; j <= i; j++) {
@@ -63,11 +55,6 @@ function upLeft(height, colorEven, colorOdd, symbol) {
             }
         }
 
-        // add spaces
-        for (let j = 1; j <= height - i; j++) {
-            output += " ";
-        }
-
         output += "<br>";
     }
 
@@ -86,11 +73,6 @@ function downLeft(height, colorEven, colorOdd, symbol) {
             } else {
                 output += `<span style="color:${colorOdd}">${symbol}</span>`;
             }
-        }
-
-        // add spaces
-        for (let j = 1; j <= height - i; j++) {
-            output += " ";
         }
 
         output += "<br>";

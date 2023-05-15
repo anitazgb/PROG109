@@ -97,3 +97,25 @@ button:hover {
             "downLeft downRight";
     }
 }
+
+.rhombus-container {
+	width: 100%;
+	clear: both;
+}
+.rhombus-container span {
+  	display: inline-block; 
+	margin: 3px;
+}
+.calculate {
+	margin: 0 0 40px 0;
+}
+#upLeft, #downLeft {
+	float: left;
+	text-align: right;
+    	width: 50%;
+}
+#upRight, #downRight {
+	float: right;
+	text-align: left;
+    	width: 50%;
+}
